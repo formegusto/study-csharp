@@ -22,6 +22,32 @@ namespace study_csharp
             {
                 Console.WriteLine(listInt[i]);
             }
+
+            int g = 0;
+            do
+            {
+                Console.WriteLine(listInt[g]);
+
+                g++;
+            } while (g < listInt.Count);
+
+            Enums enums = new Enums();
+            enums.EnumTest();
+        }
+    }
+
+    class Enums
+    {
+        enum PlayerState {
+            Idle,
+            Attacking,
+        }
+        static PlayerState playerState;
+
+        public void EnumTest()
+        {
+            Console.WriteLine("PlayerState 1: ===> " + PlayerState.Idle);
+            Console.WriteLine("PlayerState 2: ===> " + PlayerState.Attacking);
         }
     }
 }
